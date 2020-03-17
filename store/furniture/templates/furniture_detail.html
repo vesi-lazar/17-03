@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+    <div class="col-lg-6">
+        <img src="{{furniture.image_url}}" style="width:100%" alt="">
+    </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12" style="margin-top: 20%">
+                        <h3>Производство: {{furniture.make}}</h3>
+                        <h3>Цена в лева: {{furniture.price}}</h3>
+                        <h3>Модел: {{furniture.model}}</h3>
+                        <p>Описание: {{furniture.description}}</p>
+                    </div>
+                    <a class="btn btn-primary" href="{% url 'furniture:update' furniture.id%}">Edit {{furniture.name}}</a>
+                </div>
+            </div>
+    </div>
+    </div>
+</body>
+</html>
